@@ -9,3 +9,5 @@ Import your GitHub repository
 Click Deploy
 
 The website will be live in about 30 second
+
+https://vercel.com/tg14578s-projects
