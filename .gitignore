@@ -26,6 +26,13 @@ yarn-error.log*
 # Vercel
 .vercel
 
+# PAUL framework (development tooling)
+.paul/
+
+# Claude (development tooling)
+CLAUDE.md
+.claude/
+
 # Local reference files (not needed for site)
 docs/
 CONTENT.md
