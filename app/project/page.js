@@ -19,6 +19,8 @@ export default function Project(){
           <a href="#failed-works">Failed Works</a>
           <a href="#discussion">Discussion</a>
           <a href="#accomplishments">Accomplishments</a>
+          <a href="#significance">Significance</a>
+          <a href="#future-work">Future Work</a>
         </div>
       </div>
 
@@ -43,15 +45,15 @@ export default function Project(){
               <ul className="detail-list">
                 <li><span className="bullet-dot" /> Multiple ESP32-S3 microcontrollers serve as both transmitter and receiver nodes</li>
                 <li><span className="bullet-dot" /> Each node is equipped with external 2.4 GHz Wi-Fi antennas for improved signal range</li>
-                <li><span className="bullet-dot" /> Nodes capture Channel State Information (CSI) from wireless packets at the PHY layer</li>
+                <li><span className="bullet-dot" /> Nodes capture Channel State Information (CSI) from wireless packets at the PHY (physical) layer</li>
                 <li><span className="bullet-dot" /> On-chip edge processing performs initial signal filtering, phase unwrapping, and variance analysis before transmitting results</li>
                 <li><span className="bullet-dot" /> Each sensing node is powered by a rechargeable LiPo battery for portable, wireless field deployment</li>
               </ul>
 
               <h4>Coordinator Node</h4>
               <ul className="detail-list">
-                <li><span className="bullet-dot" /> A dedicated ESP32 operates in SoftAP (Access Point) mode, creating a local WiFi network</li>
-                <li><span className="bullet-dot" /> All sensing nodes connect to the coordinator and stream processed data via UDP</li>
+                <li><span className="bullet-dot" /> A dedicated ESP32 operates in SoftAP (Software Access Point) mode, creating a local WiFi network for the sensing nodes</li>
+                <li><span className="bullet-dot" /> All sensing nodes connect to the coordinator and stream processed data via UDP (User Datagram Protocol), a lightweight network protocol chosen for its low latency</li>
                 <li><span className="bullet-dot" /> The coordinator bridges aggregated data over USB serial to the Raspberry Pi</li>
               </ul>
 
@@ -67,6 +69,15 @@ export default function Project(){
               <p className="body-text">
                 Total system cost is under $450 using off-the-shelf components, making it accessible for emergency response teams and scalable for larger deployments.
               </p>
+
+              <div className="figure" style={{marginTop: '24px'}}>
+                <div style={{width: '100%', height: '200px', background: 'var(--platinum)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--cerulean)', fontSize: '11pt'}}>
+                  Hardware Layout Diagram — Coming Soon
+                </div>
+                <p className="figure-caption">
+                  Fig. 1. Hardware Design and Node Layout
+                </p>
+              </div>
             </div>
           </details>
 
@@ -80,14 +91,14 @@ export default function Project(){
             <div className="expandable-content">
               <h4>CSI Data Extraction</h4>
               <p className="body-text">
-                Channel State Information captures the frequency response of the wireless channel across multiple OFDM subcarriers. Each CSI measurement contains amplitude and phase information for each subcarrier, providing a detailed picture of how the signal propagates through the environment.
+                Channel State Information captures the frequency response of the wireless channel across multiple OFDM (Orthogonal Frequency-Division Multiplexing) subcarriers. Each CSI measurement contains amplitude and phase information for each subcarrier, providing a detailed picture of how the signal propagates through the environment.
               </p>
 
               <h4>Mathematical Framework</h4>
               <div className="math-block">
                 <p><strong>CSI Representation:</strong></p>
-                <p className="math-formula">H(f, t) = |H(f, t)| &middot; e<sup>j&angle;H(f,t)</sup></p>
-                <p className="math-desc">where |H(f,t)| is the amplitude and &angle;H(f,t) is the phase for subcarrier frequency f at time t.</p>
+                <p className="math-formula">H(f, t) = |H(f, t)| &middot; e<sup>j&theta;(f,t)</sup></p>
+                <p className="math-desc">where |H(f,t)| is the amplitude and &theta;(f,t) is the phase for subcarrier frequency f at time t.</p>
               </div>
 
               <div className="math-block">
@@ -140,7 +151,7 @@ export default function Project(){
               <h4>End-to-End Data Flow</h4>
               <ol className="numbered-list">
                 <li>Multiple ESP32 sensing nodes equipped with Wi-Fi antennas transmit and receive RF signals continuously</li>
-                <li>CSI data from the wireless communication channel is captured at each receiver node at the PHY layer</li>
+                <li>CSI data from the wireless communication channel is captured at each receiver node at the PHY (physical) layer</li>
                 <li>On-chip edge processing on each ESP32 performs signal filtering, variance analysis, and noise removal</li>
                 <li>Processed data streams from each node to the coordinator ESP32 via UDP over the local SoftAP network</li>
                 <li>The coordinator aggregates all node data and bridges it over USB serial to the Raspberry Pi</li>
@@ -299,7 +310,13 @@ export default function Project(){
           <div className="goal-card"><div className="goal-icon" style={{color: 'var(--orange)'}}>&#x2713;</div><p>Built a fully-functional prototype capable of detecting human-induced signal disturbances</p></div>
           <div className="goal-card"><div className="goal-icon" style={{color: 'var(--orange)'}}>&#x2713;</div><p>Created a real-time visualization interface to display detection results</p></div>
 
-          <div className="section-heading" style={{marginTop: '56px'}}>
+        </div>
+      </section>
+
+      {/* Significance */}
+      <section className="section-gray" id="significance">
+        <div className="section-inner">
+          <div className="section-heading">
             <h2>Significance</h2>
             <div className="accent-bar" />
           </div>
@@ -308,6 +325,23 @@ export default function Project(){
           <div className="goal-card"><div className="goal-icon" style={{background: 'rgba(255,103,0,0.1)'}}>&#x25CF;</div><p>Utilizes low-cost (&lt;$450) and widely available Wi-Fi hardware, making the system scalable and portable</p></div>
           <div className="goal-card"><div className="goal-icon" style={{background: 'rgba(255,103,0,0.1)'}}>&#x25CF;</div><p>Shows strong potential for search and rescue applications where victims may be hidden beneath debris or structural barriers</p></div>
           <div className="goal-card"><div className="goal-icon" style={{background: 'rgba(255,103,0,0.1)'}}>&#x25CF;</div><p>Establishes a foundation for future improvements such as enhanced localization accuracy, expanded sensing networks, and 3D mapping capabilities</p></div>
+        </div>
+      </section>
+
+      {/* Future Work */}
+      <section className="section-white" id="future-work">
+        <div className="section-inner">
+          <div className="section-heading">
+            <h2>Future Work</h2>
+            <p>Planned improvements and research directions for the CSI Search and Rescue System.</p>
+            <div className="accent-bar" />
+          </div>
+          <div className="goal-card"><div className="goal-icon">&#x2192;</div><p>Improve detection range beyond 15 meters by optimizing antenna placement and signal processing parameters</p></div>
+          <div className="goal-card"><div className="goal-icon">&#x2192;</div><p>Reduce response time from 120 seconds toward the 30-second target through optimized processing pipelines and faster data aggregation</p></div>
+          <div className="goal-card"><div className="goal-icon">&#x2192;</div><p>Expand the sensing network to support more nodes for finer-grained spatial resolution and larger coverage areas</p></div>
+          <div className="goal-card"><div className="goal-icon">&#x2192;</div><p>Investigate 3D localization capabilities using multi-floor node arrangements for multi-story building scenarios</p></div>
+          <div className="goal-card"><div className="goal-icon">&#x2192;</div><p>Conduct field testing in realistic disaster environments with debris, dust, and structural damage</p></div>
+          <div className="goal-card"><div className="goal-icon">&#x2192;</div><p>Explore integration with existing emergency response communication systems and protocols</p></div>
         </div>
       </section>
     </div>
