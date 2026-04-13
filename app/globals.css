@@ -1,40 +1,1158 @@
+/* === CSS Variables (Base44 Color Palette) === */
+:root {
+  --blue: #004e98;
+  --orange: #ff6700;
+  --orange-hover: #e05a00;
+  --platinum: #ebebeb;
+  --silver: #c0c0c0;
+  --cerulean: #3a6ea5;
+  --text: #3a3a3a;
+  --white: #ffffff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: Verdana, Arial, Tahoma, sans-serif;
-  background: #f9fafb;
-  color: #111827;
+  font-size: 11pt;
+  line-height: 1.6;
+  background: var(--white);
+  color: var(--text);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
+a {
+  text-decoration: none;
 }
 
-h1 { font-size: 28px; }
-h2 { font-size: 22px; }
-h3 { font-size: 18px; }
-
+/* === Navigation === */
 .nav {
   position: fixed;
   top: 0;
-  width: 100%;
-  background: #111827;
-  padding: 15px 30px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(235, 235, 235, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--silver);
+  height: 64px;
 }
 
-.nav a {
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 10pt;
+}
+
+.nav-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
-  margin-right: 20px;
-  text-decoration: none;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links a {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 10pt;
+  font-weight: 500;
+  color: var(--cerulean);
+  transition: background 0.2s;
+}
+
+.nav-links a:hover {
+  background: rgba(192, 192, 192, 0.3);
+}
+
+.nav-links a.active {
+  background: var(--blue);
+  color: white;
+}
+
+/* === Page Hero Banners === */
+.page-hero {
+  padding: 96px 20px 48px;
+  background: var(--blue);
+}
+
+.page-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-size: 24pt;
+  line-height: 1.3;
+  color: var(--platinum);
+  margin: 0 0 12px;
+}
+
+.page-hero p {
+  font-size: 11pt;
+  line-height: 1.7;
+  color: var(--silver);
+  max-width: 600px;
+  margin: 0;
+}
+
+.accent-bar {
+  width: 48px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--orange);
+  margin-top: 16px;
+}
+
+/* === Home Hero (Full-height) === */
+.home-hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--blue);
+}
+
+.home-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1600');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+}
+
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,78,152,0.95) 0%, rgba(0,78,152,0.75) 60%, rgba(58,110,165,0.6) 100%);
+}
+
+.home-hero-content {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 103, 0, 0.15);
+  border: 1px solid rgba(255, 103, 0, 0.35);
+  color: var(--orange);
+  font-size: 9pt;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.home-hero h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.15;
+  color: var(--platinum);
+  margin: 0;
+  max-width: 700px;
+}
+
+.home-hero h1 span {
+  color: var(--orange);
+}
+
+.home-hero .hero-subtitle {
+  margin-top: 24px;
+  font-size: 12pt;
+  line-height: 1.8;
+  color: var(--silver);
+  max-width: 560px;
+}
+
+.hero-buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 10pt;
+  font-weight: 600;
+  background: var(--orange);
+  color: white;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--orange-hover);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 10pt;
+  font-weight: 600;
+  background: rgba(235, 235, 235, 0.1);
+  color: var(--platinum);
+  border: 1px solid rgba(235, 235, 235, 0.2);
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(235, 235, 235, 0.18);
+}
+
+/* === Content Sections (alternating backgrounds) === */
+.section-white {
+  padding: 80px 20px;
+  background: var(--white);
+}
+
+.section-gray {
+  padding: 80px 20px;
+  background: var(--platinum);
+}
+
+.section-blue {
+  padding: 80px 20px;
+  background: var(--cerulean);
+  text-align: center;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-inner-wide {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* === Section Headings === */
+.section-heading {
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: 24pt;
+  line-height: 1.3;
+  color: var(--blue);
+  margin: 0 0 12px;
+}
+
+.section-heading p {
+  font-size: 11pt;
+  line-height: 1.7;
+  color: var(--cerulean);
+  max-width: 600px;
+  margin: 0;
+}
+
+.section-heading.light h2 {
+  color: var(--platinum);
+}
+
+.section-heading.light p {
+  color: var(--silver);
+}
+
+.section-heading .accent-bar {
+  margin-top: 16px;
+}
+
+/* === Feature Cards (Home page) === */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--silver);
+  background: var(--white);
+  transition: box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 103, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--orange);
+  font-size: 16pt;
   font-weight: bold;
 }
 
-.footer {
-  margin-top: 60px;
-  padding: 30px;
-  background: #111827;
-  color: white;
+.feature-card h3 {
+  font-size: 14pt;
+  color: var(--blue);
+  margin: 0 0 8px;
+}
+
+.feature-card p {
+  font-size: 10pt;
+  line-height: 1.7;
+  color: var(--cerulean);
+  margin: 0;
+}
+
+/* === Content Cards === */
+.content-card {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--silver);
+  background: var(--white);
+  margin-bottom: 12px;
+}
+
+.content-card-light {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--silver);
+  background: var(--platinum);
+  margin-bottom: 12px;
+}
+
+/* === Highlight Box (for hypothesis) === */
+.highlight-box {
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255, 103, 0, 0.06);
+  border: 1px solid rgba(255, 103, 0, 0.25);
+  margin-bottom: 40px;
+}
+
+.highlight-box p {
+  font-size: 12pt;
+  line-height: 1.8;
+  color: var(--blue);
+  font-style: italic;
+  margin: 0;
+}
+
+/* === Goal Cards === */
+.goal-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--silver);
+  background: var(--white);
+  margin-bottom: 12px;
+}
+
+.goal-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(0, 78, 152, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--blue);
+  font-size: 14pt;
+}
+
+.goal-card p {
+  font-size: 11pt;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0;
+}
+
+/* === Methodology Cards === */
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.methodology-card {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--silver);
+  background: var(--platinum);
+}
+
+.methodology-card h3 {
+  font-size: 14pt;
+  color: var(--blue);
+  margin: 0 0 12px;
+  font-weight: bold;
+}
+
+.methodology-card li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 10pt;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+.methodology-card ul {
+  padding: 0;
+  margin: 0;
+}
+
+.bullet-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+/* === Discussion Cards (Advantages/Challenges) === */
+.discussion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.discussion-card {
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.discussion-card.advantages {
+  background: rgba(0, 78, 152, 0.05);
+  border: 1px solid rgba(0, 78, 152, 0.2);
+}
+
+.discussion-card.challenges {
+  background: rgba(255, 103, 0, 0.05);
+  border: 1px solid rgba(255, 103, 0, 0.25);
+}
+
+.discussion-card h3 {
+  font-size: 14pt;
+  margin: 0 0 16px;
+}
+
+.discussion-card.advantages h3 {
+  color: var(--blue);
+}
+
+.discussion-card.challenges h3 {
+  color: var(--orange);
+}
+
+.discussion-card li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 11pt;
+  color: var(--text);
+  margin-bottom: 12px;
+  list-style: none;
+}
+
+.discussion-card ul {
+  padding: 0;
+  margin: 0;
+}
+
+.check-icon {
+  color: var(--blue);
+  flex-shrink: 0;
+}
+
+.warn-icon {
+  color: var(--orange);
+  flex-shrink: 0;
+}
+
+/* === Image with caption === */
+.figure {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--silver);
+  margin-top: 40px;
+}
+
+.figure img {
+  width: 100%;
+  height: 256px;
+  object-fit: cover;
+  display: block;
+}
+
+.figure-caption {
   text-align: center;
+  font-size: 9pt;
+  padding: 12px;
+  background: var(--platinum);
+  color: var(--cerulean);
+}
+
+/* === Documents Grid === */
+.docs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.doc-card {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--silver);
+  background: var(--platinum);
+  transition: box-shadow 0.2s;
+}
+
+.doc-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.doc-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 103, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--orange);
+  font-size: 16pt;
+}
+
+.doc-card h3 {
+  font-size: 12pt;
+  color: var(--blue);
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.doc-card p {
+  font-size: 10pt;
+  color: var(--cerulean);
+  margin: 0;
+}
+
+.doc-card .badge-soon {
+  display: inline-block;
+  font-size: 8pt;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--silver);
+  color: var(--text);
+  margin-left: 8px;
+}
+
+.doc-card a {
+  color: var(--blue);
+}
+
+/* === References === */
+.reference-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--silver);
+  background: var(--white);
+  margin-bottom: 16px;
+}
+
+.ref-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--platinum);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--cerulean);
+  font-size: 12pt;
+}
+
+.ref-number {
+  font-size: 9pt;
+  font-weight: 500;
+  color: var(--silver);
+  margin-bottom: 4px;
+}
+
+.ref-authors {
+  font-size: 11pt;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.ref-journal {
+  font-size: 10pt;
+  font-style: italic;
+  color: var(--cerulean);
+  margin-top: 4px;
+}
+
+/* === Team Grid === */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.team-card {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--silver);
+  background: var(--platinum);
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.team-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+.team-card h3 {
+  font-size: 14pt;
+  color: var(--blue);
+  margin: 0 0 4px;
+  font-weight: bold;
+}
+
+.team-role {
+  font-size: 10pt;
+  color: var(--orange);
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+
+.team-program {
+  font-size: 10pt;
+  color: var(--cerulean);
+  margin: 0 0 4px;
+}
+
+.team-dept {
+  font-size: 9pt;
+  color: var(--silver);
+  margin: 0;
+}
+
+.team-contact {
+  margin-top: 16px;
+}
+
+.team-contact a {
+  font-size: 9pt;
+  font-weight: 500;
+  color: var(--orange);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.team-contact a:hover {
+  text-decoration: underline;
+}
+
+/* === Mentor Card === */
+.mentor-card {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid var(--silver);
+  background: var(--white);
+  text-align: center;
+}
+
+.mentor-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 16px;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 28pt;
+}
+
+.mentor-card h3 {
+  font-size: 18pt;
+  color: var(--blue);
+  margin: 0 0 4px;
+  font-weight: bold;
+}
+
+.mentor-card .mentor-title {
+  font-size: 11pt;
+  color: var(--orange);
+  font-weight: 500;
+  margin: 0;
+}
+
+.mentor-card .mentor-dept {
+  font-size: 10pt;
+  color: var(--cerulean);
+  margin: 4px 0 0;
+}
+
+/* === Contact Box === */
+.contact-box {
+  max-width: 480px;
+  margin: 32px auto 0;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--silver);
+  background: var(--platinum);
+}
+
+.contact-box p {
+  font-size: 11pt;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+
+.contact-box strong {
+  color: var(--blue);
+}
+
+.contact-box .contact-note {
+  font-size: 10pt;
+  color: var(--cerulean);
+  margin-top: 16px;
+}
+
+/* === CTA Section (blue band) === */
+.section-blue h2 {
+  font-size: 24pt;
+  color: var(--platinum);
+  margin: 0 0 12px;
+}
+
+.section-blue p {
+  font-size: 11pt;
+  color: var(--silver);
+  margin: 0;
+}
+
+.section-blue .btn-primary {
+  margin-top: 32px;
+}
+
+/* === Footer === */
+.footer {
+  padding: 48px 20px;
+  background: var(--blue);
+  color: var(--platinum);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+.footer-brand span {
+  font-size: 10pt;
+  font-weight: 500;
+  color: var(--platinum);
+}
+
+.footer-info {
+  font-size: 9pt;
+  color: var(--silver);
+}
+
+/* === Body text styling === */
+.body-text {
+  font-size: 11pt;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.body-text p {
+  margin: 0 0 20px;
+}
+
+/* === Lists === */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.check-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 11pt;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* === Section Jump Navigation === */
+.section-jump-bar {
+  position: sticky;
+  top: 64px;
+  z-index: 50;
+  background: var(--white);
+  border-bottom: 1px solid var(--silver);
+  padding: 0 20px;
+  overflow-x: auto;
+}
+
+.section-jump-bar .section-inner-wide {
+  display: flex;
+  gap: 4px;
+}
+
+.section-jump-bar a {
+  padding: 12px 16px;
+  font-size: 9pt;
+  font-weight: 600;
+  color: var(--cerulean);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.section-jump-bar a:hover {
+  color: var(--blue);
+  border-bottom-color: var(--orange);
+}
+
+/* Offset scroll targets for fixed nav + jump bar */
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 130px;
+}
+
+/* === Expandable Sections === */
+.expandable-section {
+  border: 1px solid var(--silver);
+  border-radius: 16px;
+  background: var(--platinum);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.expandable-section[open] {
+  background: var(--white);
+}
+
+.expandable-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  cursor: pointer;
+  font-size: 14pt;
+  font-weight: bold;
+  color: var(--blue);
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.expandable-header::-webkit-details-marker {
+  display: none;
+}
+
+.expandable-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(0, 78, 152, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16pt;
+  color: var(--blue);
+}
+
+.expand-arrow {
+  margin-left: auto;
+  font-size: 10pt;
+  color: var(--cerulean);
+  transition: transform 0.2s;
+}
+
+.expandable-section[open] .expand-arrow {
+  transform: rotate(180deg);
+}
+
+.expandable-content {
+  padding: 0 24px 24px;
+  border-top: 1px solid var(--silver);
+}
+
+.expandable-content h4 {
+  font-size: 12pt;
+  color: var(--blue);
+  margin: 20px 0 12px;
+  font-weight: bold;
+}
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-list li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 10pt;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.numbered-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.numbered-list li {
+  font-size: 10pt;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+/* === Math Blocks === */
+.math-block {
+  background: var(--platinum);
+  border: 1px solid var(--silver);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.math-block p {
+  margin: 0;
+}
+
+.math-formula {
+  font-family: 'Cambria Math', 'Times New Roman', serif;
+  font-size: 13pt;
+  color: var(--blue);
+  padding: 8px 0;
+  text-align: center;
+}
+
+.math-desc {
+  font-size: 9pt;
+  color: var(--cerulean);
+  line-height: 1.6;
+  margin-top: 4px;
+}
+
+/* === Failed Works Cards === */
+.failed-card {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e5c5c5;
+  background: #fef7f7;
+  margin-bottom: 16px;
+}
+
+.failed-card h4 {
+  font-size: 13pt;
+  color: #b91c1c;
+  margin: 0 0 12px;
+  font-weight: bold;
+}
+
+.failed-card p {
+  font-size: 10pt;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.failed-lesson {
+  font-size: 10pt;
+  line-height: 1.7;
+  color: var(--cerulean);
+  border-top: 1px solid #e5c5c5;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+/* === Tablet: 768px - 1024px === */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Mobile: < 768px === */
+@media (max-width: 767px) {
+  .page-hero {
+    padding: 80px 16px 32px;
+  }
+
+  .page-hero h1 {
+    font-size: 20pt;
+  }
+
+  .home-hero-content {
+    padding: 60px 16px;
+  }
+
+  .section-white,
+  .section-gray,
+  .section-blue {
+    padding: 48px 16px;
+  }
+
+  .section-heading h2 {
+    font-size: 20pt;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discussion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-brand span {
+    display: none;
+  }
+
+  .nav-links a {
+    padding: 10px 10px;
+    font-size: 9pt;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
 }

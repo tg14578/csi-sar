@@ -1,21 +1,145 @@
 
 export default function About(){
   return(
-    <div className="container">
-      <h1>Project Background</h1>
+    <div>
+      {/* Hero banner */}
+      <div className="page-hero">
+        <div className="page-hero-inner">
+          <h1>About the Project</h1>
+          <p>Understanding how wireless signal analysis can revolutionize search and rescue operations.</p>
+          <div className="accent-bar" />
+        </div>
+      </div>
 
-      <p>
-      Disaster environments such as earthquakes or collapsed buildings make
-      it difficult for rescue teams to locate survivors quickly.
-      Traditional cameras or thermal sensors often fail due to
-      smoke, dust, and structural barriers.
-      </p>
+      {/* Section Jump Nav */}
+      <div className="section-jump-bar">
+        <div className="section-inner-wide">
+          <a href="#background">Background</a>
+          <a href="#hypothesis">Hypothesis &amp; Goals</a>
+          <a href="#preliminary">Preliminary Work</a>
+        </div>
+      </div>
 
-      <p>
-      RF sensing using WiFi signals provides a promising solution.
-      Channel State Information captures detailed properties of
-      wireless signals, allowing detection of motion or human presence.
-      </p>
+      {/* Background */}
+      <section className="section-white" id="background">
+        <div className="section-inner">
+          <div className="section-heading">
+            <h2>Background</h2>
+            <div className="accent-bar" />
+          </div>
+          <div className="body-text">
+            <p>
+              Search and rescue operations often occur in environments where victims are
+              hidden beneath debris, collapsed structures, or smoke, making detection
+              difficult with traditional methods such as cameras or thermal sensors.
+              Wireless signals offer an alternative sensing approach because they can
+              propagate through certain obstacles.
+            </p>
+            <p>
+              Channel State Information (CSI) from Wi-Fi communication provides detailed
+              measurements of how signals travel between transmitters and receivers.
+              Human movement alters these signals through reflection and absorption,
+              creating detectable variations.
+            </p>
+            <p>
+              By analyzing CSI using signal processing, it is possible to detect human
+              presence without requiring direct line-of-sight.
+            </p>
+          </div>
+          <div className="figure">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200"
+              alt="Collapsed structure from natural disaster"
+            />
+            <p className="figure-caption">
+              Fig. 1. Collapsed structures where traditional detection methods fail
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Hypothesis & Goals */}
+      <section className="section-gray" id="hypothesis">
+        <div className="section-inner">
+          <div className="section-heading">
+            <h2>Hypothesis &amp; Research Goals</h2>
+            <div className="accent-bar" />
+          </div>
+
+          <div className="highlight-box">
+            <p>
+              &ldquo;We hypothesize that variations in Wi-Fi Channel State Information
+              can be analyzed using signal processing to reliably detect human presence
+              and motion in obstructed environments.&rdquo;
+            </p>
+          </div>
+
+          <div className="goal-card">
+            <div className="goal-icon">&#x2713;</div>
+            <p>Achieve ≥80% detection accuracy in controlled indoor environments</p>
+          </div>
+          <div className="goal-card">
+            <div className="goal-icon">&#x2713;</div>
+            <p>Support detection within a 15–30 meter range</p>
+          </div>
+          <div className="goal-card">
+            <div className="goal-icon">&#x2713;</div>
+            <p>Maintain response time &lt; 120 seconds (target: &lt; 30 seconds in optimized system)</p>
+          </div>
+          <div className="goal-card">
+            <div className="goal-icon">&#x2713;</div>
+            <p>Maintain false positive/negative rate &lt; 15%</p>
+          </div>
+          <div className="goal-card">
+            <div className="goal-icon">&#x2713;</div>
+            <p>Design a system with total cost &lt; $450</p>
+          </div>
+          <div className="goal-card">
+            <div className="goal-icon">&#x2713;</div>
+            <p>Transmit CSI measurements to a central processing unit for analysis</p>
+          </div>
+          <div className="goal-card">
+            <div className="goal-icon">&#x2713;</div>
+            <p>Visualize detection results in a real-time heatmap interface</p>
+          </div>
+          <div className="goal-card">
+            <div className="goal-icon">&#x2713;</div>
+            <p>Demonstrate a portable RF-based sensing system for search and rescue operations</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Preliminary Work */}
+      <section className="section-white" id="preliminary">
+        <div className="section-inner">
+          <div className="section-heading">
+            <h2>Preliminary Work</h2>
+            <div className="accent-bar" />
+          </div>
+          <div className="body-text">
+            <p>
+              Initial system development focused on establishing reliable CSI data
+              acquisition and communication between sensing nodes and a central
+              processing unit.
+            </p>
+            <p>
+              Multiple ESP32 microcontrollers equipped with 2.4 GHz antennas were
+              configured as transmitter and receiver nodes to capture wireless channel
+              measurements. The CSI data collected from these nodes was transmitted to
+              a Raspberry Pi for storage and processing.
+            </p>
+            <p>
+              A preliminary signal processing pipeline was implemented to filter noise
+              and extract relevant features from CSI amplitude variations.
+            </p>
+            <p>
+              These early experiments demonstrated measurable CSI variations when a
+              person moved within the sensing environment, indicating the feasibility
+              of RF-based human detection.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
