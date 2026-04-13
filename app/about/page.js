@@ -17,6 +17,7 @@ export default function About(){
           <a href="#background">Background</a>
           <a href="#hypothesis">Hypothesis &amp; Goals</a>
           <a href="#preliminary">Preliminary Work</a>
+          <a href="#standards">Standards &amp; Compliance</a>
         </div>
       </div>
 
@@ -136,6 +137,38 @@ export default function About(){
               These early experiments demonstrated measurable CSI variations when a
               person moved within the sensing environment, indicating the feasibility
               of RF-based human detection.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Standards & Compliance */}
+      <section className="section-gray" id="standards">
+        <div className="section-inner">
+          <div className="section-heading">
+            <h2>Standards &amp; Compliance</h2>
+            <p>Industry standards and codes governing the design and operation of this system.</p>
+            <div className="accent-bar" />
+          </div>
+
+          <div className="content-card" style={{marginBottom: '16px'}}>
+            <h3 style={{fontSize: '14pt', color: 'var(--blue)', margin: '0 0 8px', fontWeight: 'bold'}}>IEEE 802.11-2020 &mdash; Wi-Fi Standard</h3>
+            <p style={{fontSize: '11pt', lineHeight: '1.8', color: 'var(--text)', margin: 0}}>
+              The system operates within the 2.4 GHz ISM (Industrial, Scientific, and Medical) band as defined by the IEEE 802.11-2020 wireless networking standard. All CSI data extraction and wireless communication between sensing nodes conforms to this standard.
+            </p>
+          </div>
+
+          <div className="content-card" style={{marginBottom: '16px'}}>
+            <h3 style={{fontSize: '14pt', color: 'var(--blue)', margin: '0 0 8px', fontWeight: 'bold'}}>IEEE C95.1-2019 / FCC Title 47 / FCC OET-65 &mdash; RF Exposure Safety</h3>
+            <p style={{fontSize: '11pt', lineHeight: '1.8', color: 'var(--text)', margin: 0}}>
+              Safety standards for radio frequency exposure ensuring that 2.4 GHz signal density remains safe for trapped survivors and central device users. FCC OET-65 provides the methods for evaluating compliance with RF exposure limits. The system&apos;s low-power Wi-Fi transmissions operate well within permissible exposure limits defined by these standards.
+            </p>
+          </div>
+
+          <div className="content-card">
+            <h3 style={{fontSize: '14pt', color: 'var(--blue)', margin: '0 0 8px', fontWeight: 'bold'}}>IEEE Code of Ethics &mdash; Public Safety &amp; Welfare</h3>
+            <p style={{fontSize: '11pt', lineHeight: '1.8', color: 'var(--text)', margin: 0}}>
+              This project adheres to the IEEE Code of Ethics, prioritizing public safety and welfare in all design decisions. The system is designed to aid first responders in locating trapped individuals without introducing additional risk to survivors or rescue personnel.
             </p>
           </div>
         </div>
