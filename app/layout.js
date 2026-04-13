@@ -8,14 +8,19 @@ export const metadata = {
   description: "Machine Learning Optimized Search and Rescue System using Channel State Information"
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
         <Navbar />
-        <div style={{paddingTop:'70px'}}>
+        <main style={{minHeight: '100vh'}}>
           {children}
-        </div>
+        </main>
         <Footer />
       </body>
     </html>

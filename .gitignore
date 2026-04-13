@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Next.js
+.next/
+out/
+
+# Production
+build/
+
+# Misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# PAUL framework (development tooling)
+.paul/
+
+# Claude (development tooling)
+CLAUDE.md
+.claude/
+
+# Local reference files (not needed for site)
+docs/
+CONTENT.md
+website base.txt
+.observer.lock

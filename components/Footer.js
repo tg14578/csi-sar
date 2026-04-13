@@ -1,9 +1,16 @@
 
 export default function Footer(){
   return(
-    <div className="footer">
-      <p>CSI Search & Rescue System Project</p>
-      <p>Georgia Southern University</p>
-    </div>
+    <footer className="footer">
+      <div className="footer-inner">
+        <div className="footer-brand">
+          <div className="footer-icon">&#x25C8;</div>
+          <span>CSI Search &amp; Rescue System</span>
+        </div>
+        <p className="footer-info">
+          Department of Electrical and Computer Engineering &middot; Faculty Mentor: Dr. Seungmo Kim
+        </p>
+      </div>
+    </footer>
   )
 }
