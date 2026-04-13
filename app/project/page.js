@@ -14,6 +14,7 @@ export default function Project(){
       {/* Section Jump Nav */}
       <div className="section-jump-bar">
         <div className="section-inner-wide">
+          <a href="#demonstration">Demonstration</a>
           <a href="#methodology">Methodology</a>
           <a href="#results">Results</a>
           <a href="#failed-works">Failed Works</a>
@@ -23,6 +24,37 @@ export default function Project(){
           <a href="#future-work">Future Work</a>
         </div>
       </div>
+
+      {/* Demonstration */}
+      <section className="section-white" id="demonstration">
+        <div className="section-inner">
+          <div className="section-heading">
+            <h2>Demonstration</h2>
+            <p>A 3-minute demonstration of the CSI Search and Rescue System.</p>
+            <div className="accent-bar" />
+          </div>
+          <div className="figure">
+            <div style={{
+              width: '100%',
+              aspectRatio: '16 / 9',
+              maxWidth: '800px',
+              margin: '0 auto',
+              background: 'var(--platinum)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'var(--cerulean)',
+              fontSize: '11pt',
+              borderRadius: '8px',
+              gap: '12px'
+            }}>
+              <span style={{fontSize: '48px'}}>&#x25B6;</span>
+              <span>Video Coming Soon (3:00)</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Methodology */}
       <section className="section-white" id="methodology">
