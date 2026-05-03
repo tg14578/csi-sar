@@ -1001,13 +1001,19 @@ section[id] {
 }
 
 .detail-list li {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
+  position: relative;
+  padding-left: 18px;
   font-size: 10pt;
   line-height: 1.7;
   color: var(--text);
   margin-bottom: 8px;
+}
+
+.detail-list li .bullet-dot {
+  position: absolute;
+  left: 0;
+  top: 11px;
+  margin-top: 0;
 }
 
 .numbered-list {
