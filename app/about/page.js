@@ -121,22 +121,26 @@ export default function About(){
             <p>
               Initial system development focused on establishing reliable CSI data
               acquisition and communication between sensing nodes and a central
-              processing unit.
+              processing unit. Four ESP32-S3 perimeter modules were configured to enter
+              Wi-Fi promiscuous mode and capture the I/Q samples that the chip&apos;s
+              CSI driver delivers per OFDM subcarrier.
             </p>
             <p>
-              Multiple ESP32 microcontrollers equipped with 2.4 GHz antennas were
-              configured as transmitter and receiver nodes to capture wireless channel
-              measurements. The CSI data collected from these nodes was transmitted to
-              a Raspberry Pi for storage and processing.
+              To guarantee a steady CSI stream that did not depend on incidental
+              traffic, each perimeter was modified to inject a 24-byte unicast Null
+              Data Packet to its peers at 20&nbsp;Hz, providing a deterministic
+              stimulus across all six links. A fifth ESP32-S3 was configured as a
+              SoftAP coordinator to receive the resulting UDP datagrams and bridge
+              them to the host over either USB (COBS-encoded) or a secondary Wi-Fi
+              hop.
             </p>
             <p>
-              A preliminary signal processing pipeline was implemented to filter noise
-              and extract relevant features from CSI amplitude variations.
-            </p>
-            <p>
-              These early experiments demonstrated measurable CSI variations when a
-              person moved within the sensing environment, indicating the feasibility
-              of RF-based human detection.
+              Early experiments confirmed measurable CSI variations when a person
+              moved within the sensing area. Crucially, they also revealed that slow
+              ambient drift and starved links could overwhelm naive thresholding,
+              which motivated the move toward SVD drift cancellation, breathing-band
+              spectral analysis, and soft endpoint attribution &mdash; the
+              deterministic pipeline used in the final system.
             </p>
           </div>
         </div>

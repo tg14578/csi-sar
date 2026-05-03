@@ -43,22 +43,22 @@ export default function Home(){
             <div className="feature-card">
               <div className="feature-icon">&#x25CE;</div>
               <h3>RF Sensing</h3>
-              <p>Wi-Fi signals penetrate debris and obstacles where cameras cannot reach.</p>
+              <p>Wi-Fi CSI captured at ~50&nbsp;Hz on every perimeter penetrates debris and obstacles where cameras cannot reach.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">&#x2699;</div>
-              <h3>Signal Processing</h3>
-              <p>Advanced algorithms analyze CSI patterns to detect human presence.</p>
+              <h3>Deterministic Detection</h3>
+              <p>SVD drift cancellation plus a Welch periodogram in the 0.15&ndash;0.40&nbsp;Hz breathing band &mdash; no machine learning, no calibration.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">&#x25A3;</div>
               <h3>Real-Time Localization</h3>
-              <p>Heatmap visualization pinpoints victim locations for rescue teams.</p>
+              <p>An HMM-smoothed quadrant estimate plus optional continuous (x,&nbsp;y) tracking pinpoints victim locations for rescue teams.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">&#x25C6;</div>
               <h3>Non-Contact Detection</h3>
-              <p>No wearable devices required — detection works through walls and rubble.</p>
+              <p>No wearable devices required &mdash; detection works through walls and rubble.</p>
             </div>
           </div>
         </div>
