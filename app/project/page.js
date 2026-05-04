@@ -76,20 +76,81 @@ export default function Project(){
               </p>
 
               <h4>Parts List</h4>
-              <div className="figure" style={{marginTop: '12px'}}>
-                <div style={{
-                  width: '100%',
-                  padding: '32px 16px',
-                  background: 'var(--platinum)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--cerulean)',
-                  fontSize: '11pt',
-                  borderRadius: '8px'
-                }}>
-                  Parts List &mdash; Coming Soon
-                </div>
+              <div className="parts-table-wrap">
+                <table className="parts-table">
+                  <thead>
+                    <tr>
+                      <th>Component</th>
+                      <th>Est. Cost</th>
+                      <th>Actual Cost</th>
+                      <th>Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ESP32-S3 Microcontrollers &times; 5</td>
+                      <td className="num">$55.00</td>
+                      <td className="num">$58.96</td>
+                      <td className="note">Perimeter nodes + coordinator</td>
+                    </tr>
+                    <tr>
+                      <td>Universal 2.4&nbsp;GHz 7&nbsp;dBi SMA Antennas (3-pack &times; 2)</td>
+                      <td className="num">$18.56</td>
+                      <td className="num">$39.19</td>
+                      <td className="note">External antenna per node</td>
+                    </tr>
+                    <tr>
+                      <td>LiPo Batteries 3.7&nbsp;V 1000&nbsp;mAh &times; 4</td>
+                      <td className="num">$28.00</td>
+                      <td className="num">$26.15</td>
+                      <td className="note">One per perimeter node</td>
+                    </tr>
+                    <tr>
+                      <td>Adafruit PowerBoost 1000C &times; 4</td>
+                      <td className="num">$103.00</td>
+                      <td className="num">$103.47</td>
+                      <td className="note">Boost + charge per node</td>
+                    </tr>
+                    <tr>
+                      <td>Raspberry Pi 4 Kit (8&nbsp;GB, case, fan, PSU, microSD, HDMI, heatsinks)</td>
+                      <td className="num">$70.00</td>
+                      <td className="num">$119.95</td>
+                      <td className="note">Central processing hub</td>
+                    </tr>
+                    <tr>
+                      <td>7-inch IPS LCD Touchscreen 1024&times;600</td>
+                      <td className="num">$40.00</td>
+                      <td className="num">$44.95</td>
+                      <td className="note">First-responder display</td>
+                    </tr>
+                    <tr>
+                      <td>USB Power Bank</td>
+                      <td className="num">$42.00</td>
+                      <td className="num">Incl.</td>
+                      <td className="note">Powers Raspberry Pi in field</td>
+                    </tr>
+                    <tr>
+                      <td>3D-Printed PLA Enclosures</td>
+                      <td className="num">$0.00</td>
+                      <td className="num">$0.00</td>
+                      <td className="note">In-house fabrication</td>
+                    </tr>
+                    <tr>
+                      <td>PCB Fabrication</td>
+                      <td className="num">$0.00</td>
+                      <td className="num">$0.00</td>
+                      <td className="note">In-house</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td>TOTAL (before shipping/tax)</td>
+                      <td className="num">$356.56</td>
+                      <td className="num">~$392.67</td>
+                      <td className="note">Under $450 target</td>
+                    </tr>
+                  </tfoot>
+                </table>
               </div>
             </div>
           </details>
