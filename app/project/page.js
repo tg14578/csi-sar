@@ -75,27 +75,21 @@ export default function Project(){
                 Total system cost is under $450 using off-the-shelf components, making it accessible for emergency response teams and scalable for larger deployments.
               </p>
 
-              <div className="arch-diagram" style={{marginTop: '24px'}}>
-                <div className="arch-row">
-                  <div className="arch-node">Node 2&nbsp;(NW)</div>
-                  <div className="arch-node">Node 3&nbsp;(NE)</div>
+              <h4>Parts List</h4>
+              <div className="figure" style={{marginTop: '12px'}}>
+                <div style={{
+                  width: '100%',
+                  padding: '32px 16px',
+                  background: 'var(--platinum)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--cerulean)',
+                  fontSize: '11pt',
+                  borderRadius: '8px'
+                }}>
+                  Parts List &mdash; Coming Soon
                 </div>
-                <div className="arch-label">six bidirectional CSI links across the sensing area</div>
-                <div className="arch-row">
-                  <div className="arch-node">Node 1&nbsp;(SW)</div>
-                  <div className="arch-node">Node 4&nbsp;(SE)</div>
-                </div>
-                <div className="arch-arrow">&#x25BC;&nbsp;UDP 4210 over SoftAP</div>
-                <div className="arch-row">
-                  <div className="arch-node coord">Coordinator (ESP32-S3 SoftAP)</div>
-                </div>
-                <div className="arch-arrow">&#x25BC;&nbsp;USB COBS&nbsp;/&nbsp;Wi-Fi UDP 4211</div>
-                <div className="arch-row">
-                  <div className="arch-node host">Host (Laptop / Raspberry Pi)</div>
-                </div>
-                <p className="figure-caption" style={{marginTop: '12px', background: 'transparent'}}>
-                  Fig. 1. Five-board topology &mdash; four perimeter sensors, one coordinator, one host.
-                </p>
               </div>
             </div>
           </details>
@@ -157,7 +151,7 @@ export default function Project(){
               <div className="figure" style={{marginTop: '24px'}}>
                 <PipelineDiagram />
                 <p className="figure-caption">
-                  Fig. 2. Signal Processing Pipeline
+                  Fig. 1. Signal Processing Pipeline
                 </p>
               </div>
             </div>
@@ -197,12 +191,26 @@ export default function Project(){
                 A full-screen Pygame interface highlights the lit quadrant, plots the body marker, draws per-link health bars (active fraction, starve warnings), and shows a diagnostic panel with the last reset reason and crash counter from each node. Pressing <kbd>R</kbd> resets the HMM state; <kbd>Q</kbd> or <kbd>Esc</kbd> exits.
               </p>
 
-              <div className="figure" style={{marginTop: '24px'}}>
-                <div style={{width: '100%', height: '200px', background: 'var(--platinum)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--cerulean)', fontSize: '11pt'}}>
-                  System Architecture Diagram &mdash; Coming Soon
+              <div className="arch-diagram" style={{marginTop: '24px'}}>
+                <div className="arch-row">
+                  <div className="arch-node">Node 2&nbsp;(NW)</div>
+                  <div className="arch-node">Node 3&nbsp;(NE)</div>
                 </div>
-                <p className="figure-caption">
-                  Fig. 3. System Architecture Block Diagram
+                <div className="arch-label">six bidirectional CSI links across the sensing area</div>
+                <div className="arch-row">
+                  <div className="arch-node">Node 1&nbsp;(SW)</div>
+                  <div className="arch-node">Node 4&nbsp;(SE)</div>
+                </div>
+                <div className="arch-arrow">&#x25BC;&nbsp;UDP 4210 over SoftAP</div>
+                <div className="arch-row">
+                  <div className="arch-node coord">Coordinator (ESP32-S3 SoftAP)</div>
+                </div>
+                <div className="arch-arrow">&#x25BC;&nbsp;USB COBS&nbsp;/&nbsp;Wi-Fi UDP 4211</div>
+                <div className="arch-row">
+                  <div className="arch-node host">Host (Laptop / Raspberry Pi)</div>
+                </div>
+                <p className="figure-caption" style={{marginTop: '12px', background: 'transparent'}}>
+                  Fig. 2. Five-board topology &mdash; four perimeter sensors, one coordinator, one host.
                 </p>
               </div>
             </div>
@@ -488,7 +496,7 @@ static inline float unwrap_phase(float prev, float curr)
               loading="lazy"
             />
             <p className="figure-caption">
-              Fig. 4. Human Localization with Heatmap Visualization
+              Fig. 3. Human Localization with Heatmap Visualization
             </p>
           </div>
         </div>
