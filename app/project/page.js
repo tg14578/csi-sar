@@ -31,7 +31,7 @@ export default function Project(){
         <div className="section-inner">
           <div className="section-heading">
             <h2>Demonstration</h2>
-            <p>A 3-minute demonstration of the CSI Search and Rescue System.</p>
+            <p>A demonstration of the CSI Search and Rescue System.</p>
             <div className="accent-bar" />
           </div>
           <div className="figure">
@@ -252,9 +252,9 @@ export default function Project(){
             <div className="accent-bar" />
           </div>
 
-          {/* GitHub Placeholder */}
+          {/* GitHub Repository */}
           <a
-            href="https://github.com/"
+            href="https://github.com/jackjones1320/Project-Glass-House"
             target="_blank"
             rel="noopener noreferrer"
             className="repo-card"
@@ -262,14 +262,10 @@ export default function Project(){
           >
             <div className="repo-icon">&#x276E;/&#x276F;</div>
             <div>
-              <h3>
-                Source Code Repository
-                <span className="badge-soon">Coming Soon</span>
-              </h3>
+              <h3>Source Code Repository</h3>
               <p>
-                The complete firmware and Python pipeline will be published as an open-source
-                GitHub repository. Replace this card&apos;s link with the final URL once the repo
-                is public.
+                The complete firmware (ESP-IDF / C) and host pipeline (Python) are available on
+                GitHub at github.com/jackjones1320/Project-Glass-House.
               </p>
             </div>
           </a>

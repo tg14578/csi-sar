@@ -21,10 +21,10 @@ export default function Documents(){
           </div>
 
           <div className="docs-grid">
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="doc-card">
+            <a href="https://github.com/jackjones1320/Project-Glass-House" target="_blank" rel="noopener noreferrer" className="doc-card">
               <div className="doc-icon">&#x276E;/&#x276F;</div>
               <div>
-                <h3>Source Code Repository <span className="badge-soon">Coming Soon</span></h3>
+                <h3>Source Code Repository</h3>
                 <p>Complete firmware (ESP-IDF / C) and host pipeline (Python) on GitHub</p>
               </div>
             </a>
