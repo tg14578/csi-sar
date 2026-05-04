@@ -15,7 +15,6 @@ export default function Project(){
       {/* Section Jump Nav */}
       <div className="section-jump-bar">
         <div className="section-inner-wide">
-          <a href="#demonstration">Demonstration</a>
           <a href="#methodology">Methodology</a>
           <a href="#implementation">Implementation</a>
           <a href="#results">Results</a>
@@ -26,37 +25,6 @@ export default function Project(){
           <a href="#future-work">Future Work</a>
         </div>
       </div>
-
-      {/* Demonstration */}
-      <section className="section-white" id="demonstration">
-        <div className="section-inner">
-          <div className="section-heading">
-            <h2>Demonstration</h2>
-            <p>A demonstration of the CSI Search and Rescue System.</p>
-            <div className="accent-bar" />
-          </div>
-          <div className="figure">
-            <video
-              controls
-              preload="metadata"
-              playsInline
-              style={{
-                width: '100%',
-                aspectRatio: '16 / 9',
-                maxWidth: '800px',
-                margin: '0 auto',
-                display: 'block',
-                background: '#000',
-                borderRadius: '8px'
-              }}
-            >
-              <source src="/video/demonstration.mp4" type="video/mp4" />
-              Your browser does not support the video tag. You can
-              {' '}<a href="/video/demonstration.mp4">download the video</a> instead.
-            </video>
-          </div>
-        </div>
-      </section>
 
       {/* Methodology */}
       <section className="section-white" id="methodology">

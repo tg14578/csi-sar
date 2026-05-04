@@ -30,8 +30,88 @@ export default function Home(){
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Real-World Need */}
+      <section className="section-white">
+        <div className="section-inner-wide">
+          <Reveal>
+            <div className="section-heading" style={{textAlign: 'center'}}>
+              <h2>The Real-World Need</h2>
+              <p style={{margin: '0 auto'}}>
+                Tornadoes, earthquakes, and structural collapses leave victims trapped under debris where
+                line-of-sight is impossible. Every minute matters &mdash; and traditional cameras and thermal
+                imaging cannot see through rubble.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <figure style={{margin: '32px auto 0', maxWidth: '900px'}}>
+              <img
+                src="/CollapsedStructure.webp"
+                alt="A collapsed residential structure with scattered debris &mdash; the kind of disaster scenario this system is designed for"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  borderRadius: '12px',
+                  boxShadow: 'var(--shadow-md)'
+                }}
+                loading="lazy"
+              />
+              <figcaption style={{
+                textAlign: 'center',
+                marginTop: '12px',
+                color: 'var(--text-muted)',
+                fontSize: '10.5pt',
+                fontStyle: 'italic'
+              }}>
+                Wi-Fi CSI penetrates walls and debris where cameras cannot, allowing rescuers to detect
+                breathing through collapsed structures.
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Demonstration */}
       <section className="section-gray">
+        <div className="section-inner-wide">
+          <Reveal>
+            <div className="section-heading" style={{textAlign: 'center'}}>
+              <h2>See It in Action</h2>
+              <p style={{margin: '0 auto'}}>
+                A short demonstration of the CSI Search and Rescue System detecting human presence
+                through walls.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="figure" style={{marginTop: '24px'}}>
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                style={{
+                  width: '100%',
+                  aspectRatio: '16 / 9',
+                  maxWidth: '900px',
+                  margin: '0 auto',
+                  display: 'block',
+                  background: '#000',
+                  borderRadius: '12px',
+                  boxShadow: 'var(--shadow-md)'
+                }}
+              >
+                <source src="/video/demonstration.mp4" type="video/mp4" />
+                Your browser does not support the video tag. You can
+                {' '}<a href="/video/demonstration.mp4">download the video</a> instead.
+              </video>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="section-white">
         <div className="section-inner-wide">
           <Reveal>
             <div className="section-heading" style={{textAlign: 'center'}}>
