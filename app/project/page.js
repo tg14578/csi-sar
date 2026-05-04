@@ -472,9 +472,21 @@ static inline float unwrap_phase(float prev, float curr)
           </div>
 
           <div className="figure">
-            <div style={{width: '100%', height: '256px', background: 'var(--platinum)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--cerulean)', fontSize: '11pt'}}>
-              Image Coming Soon
-            </div>
+            <img
+              src="/heatmap-detection.png"
+              alt="Real-time system display showing the four sensing quadrants (Q1–Q4), the Last Reset diagnostics panel, and per-link breathing-activity bars for all six CSI links (L12, L13, L14, L23, L24, L34)"
+              style={{
+                width: '100%',
+                maxWidth: '760px',
+                height: 'auto',
+                display: 'block',
+                margin: '0 auto',
+                borderRadius: '8px',
+                background: '#000',
+                boxShadow: 'var(--shadow-md)'
+              }}
+              loading="lazy"
+            />
             <p className="figure-caption">
               Fig. 4. Human Localization with Heatmap Visualization
             </p>

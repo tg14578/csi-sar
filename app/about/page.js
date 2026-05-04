@@ -49,8 +49,18 @@ export default function About(){
           </div>
           <div className="figure">
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200"
-              alt="Collapsed structure from natural disaster"
+              src="/CollapsedStructure.jpg"
+              alt="Collapsed residential structure with shattered roof beams and scattered debris"
+              style={{
+                width: '100%',
+                maxWidth: '900px',
+                height: 'auto',
+                display: 'block',
+                margin: '0 auto',
+                borderRadius: '12px',
+                boxShadow: 'var(--shadow-md)'
+              }}
+              loading="lazy"
             />
             <p className="figure-caption">
               Fig. 1. Collapsed structures where traditional detection methods fail
