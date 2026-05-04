@@ -35,24 +35,24 @@ export default function Project(){
             <div className="accent-bar" />
           </div>
           <div className="figure">
-            <div style={{
-              width: '100%',
-              aspectRatio: '16 / 9',
-              maxWidth: '800px',
-              margin: '0 auto',
-              background: 'var(--platinum)',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'var(--cerulean)',
-              fontSize: '11pt',
-              borderRadius: '8px',
-              gap: '12px'
-            }}>
-              <span style={{fontSize: '48px'}}>&#x25B6;</span>
-              <span>Video Coming Soon (3:00)</span>
-            </div>
+            <video
+              controls
+              preload="metadata"
+              playsInline
+              style={{
+                width: '100%',
+                aspectRatio: '16 / 9',
+                maxWidth: '800px',
+                margin: '0 auto',
+                display: 'block',
+                background: '#000',
+                borderRadius: '8px'
+              }}
+            >
+              <source src="/video/demonstration.mp4" type="video/mp4" />
+              Your browser does not support the video tag. You can
+              {' '}<a href="/video/demonstration.mp4">download the video</a> instead.
+            </video>
           </div>
         </div>
       </section>

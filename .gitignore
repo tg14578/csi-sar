@@ -28,7 +28,7 @@ yarn-error.log*
 
 
 # Local reference files (not needed for site)
-docs/
+/docs/
 CONTENT.md
 website base.txt
 .observer.lock
