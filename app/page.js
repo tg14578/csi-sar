@@ -46,7 +46,7 @@ export default function Home(){
           <Reveal delay={120}>
             <figure style={{margin: '32px auto 0', maxWidth: '900px'}}>
               <img
-                src="/CollapsedStructure.webp"
+                src="/CollapsedStructure.jpg"
                 alt="A collapsed residential structure with scattered debris &mdash; the kind of disaster scenario this system is designed for"
                 style={{
                   width: '100%',
