@@ -30,48 +30,6 @@ export default function Home(){
         </div>
       </section>
 
-      {/* Real-World Need */}
-      <section className="section-white">
-        <div className="section-inner-wide">
-          <Reveal>
-            <div className="section-heading" style={{textAlign: 'center'}}>
-              <h2>The Real-World Need</h2>
-              <p style={{margin: '0 auto'}}>
-                Tornadoes, earthquakes, and structural collapses leave victims trapped under debris where
-                line-of-sight is impossible. Every minute matters &mdash; and traditional cameras and thermal
-                imaging cannot see through rubble.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <figure style={{margin: '32px auto 0', maxWidth: '900px'}}>
-              <img
-                src="/CollapsedStructure.jpg"
-                alt="A collapsed residential structure with scattered debris &mdash; the kind of disaster scenario this system is designed for"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  display: 'block',
-                  borderRadius: '12px',
-                  boxShadow: 'var(--shadow-md)'
-                }}
-                loading="lazy"
-              />
-              <figcaption style={{
-                textAlign: 'center',
-                marginTop: '12px',
-                color: 'var(--text-muted)',
-                fontSize: '10.5pt',
-                fontStyle: 'italic'
-              }}>
-                Wi-Fi CSI penetrates walls and debris where cameras cannot, allowing rescuers to detect
-                breathing through collapsed structures.
-              </figcaption>
-            </figure>
-          </Reveal>
-        </div>
-      </section>
-
       {/* Demonstration */}
       <section className="section-gray">
         <div className="section-inner-wide">
