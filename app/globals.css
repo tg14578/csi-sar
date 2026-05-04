@@ -456,6 +456,8 @@ a {
   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
   position: relative;
   overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .feature-card::before {
