@@ -63,20 +63,20 @@ export default function Documents(){
                 <p>Environmental and sustainability analysis</p>
               </div>
             </div>
-            <div className="doc-card">
+            <a href="https://github.com/jackjones1320/Project-Glass-House" target="_blank" rel="noopener noreferrer" className="doc-card">
               <div className="doc-icon">&#x1F4D0;</div>
               <div>
-                <h3>CAD Design — Central Unit <span className="badge-soon">Coming Soon</span></h3>
-                <p>3D CAD model of the central processing unit enclosure</p>
+                <h3>CAD Design — Central Unit</h3>
+                <p>3D CAD model of the central processing unit enclosure (in GitHub repo)</p>
               </div>
-            </div>
-            <div className="doc-card">
+            </a>
+            <a href="https://github.com/jackjones1320/Project-Glass-House" target="_blank" rel="noopener noreferrer" className="doc-card">
               <div className="doc-icon">&#x1F4D0;</div>
               <div>
-                <h3>CAD Design — Sensing Node <span className="badge-soon">Coming Soon</span></h3>
-                <p>3D CAD model of the ESP32 sensing node housing</p>
+                <h3>CAD Design — Sensing Node</h3>
+                <p>3D CAD model of the ESP32 sensing node housing (in GitHub repo)</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>

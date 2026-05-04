@@ -1,3 +1,4 @@
+import PipelineDiagram from '../../components/PipelineDiagram'
 
 export default function Project(){
   return(
@@ -186,9 +187,7 @@ export default function Project(){
               </ul>
 
               <div className="figure" style={{marginTop: '24px'}}>
-                <div style={{width: '100%', height: '200px', background: 'var(--platinum)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--cerulean)', fontSize: '11pt'}}>
-                  Signal Processing Pipeline Diagram &mdash; Coming Soon
-                </div>
+                <PipelineDiagram />
                 <p className="figure-caption">
                   Fig. 2. Signal Processing Pipeline
                 </p>
