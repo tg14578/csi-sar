@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "CSI Search and Rescue System",
-  description: "Machine Learning Optimized Search and Rescue System using Channel State Information"
+  description: "Human Localization Search and Rescue System using Channel State Information (CSI)"
 }
 
 export const viewport = {
