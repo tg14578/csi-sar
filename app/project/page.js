@@ -100,7 +100,7 @@ export default function Project(){
                       <td className="note">External antenna per node</td>
                     </tr>
                     <tr>
-                      <td>LiPo Batteries 3.7&nbsp;V 1000&nbsp;mAh &times; 4</td>
+                      <td>LiPo Batteries 3.7&nbsp;V 3000&nbsp;mAh &times; 4</td>
                       <td className="num">$28.00</td>
                       <td className="num">$26.15</td>
                       <td className="note">One per perimeter node</td>
