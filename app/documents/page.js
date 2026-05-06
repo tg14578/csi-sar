@@ -28,41 +28,48 @@ export default function Documents(){
                 <p>Complete firmware (ESP-IDF / C) and host pipeline (Python) on GitHub</p>
               </div>
             </a>
-            <a href="https://docs.google.com/document/d/1lFY-GiSt1biiY5DBDqy2Rq7Xtk4BjK5_/edit?usp=drive_link&ouid=113625852303333448497&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="doc-card">
+            <a href="/docs/W1_Initial_Project_Proposal.pdf" target="_blank" rel="noopener noreferrer" className="doc-card">
               <div className="doc-icon">&#x1F4C4;</div>
               <div>
                 <h3>Project Proposal</h3>
                 <p>Initial project scope, goals, and timeline</p>
               </div>
             </a>
-            <a href="https://docs.google.com/presentation/d/1YF6_Y1s7QaliNg1SS_vKjxZnIgh0xpLb/edit?usp=sharing&ouid=113625852303333448497&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="doc-card">
+            <a href="/docs/W3_Research_Poster.pdf" target="_blank" rel="noopener noreferrer" className="doc-card">
               <div className="doc-icon">&#x1F4C4;</div>
               <div>
                 <h3>Research Poster</h3>
                 <p>Research poster for department showcase</p>
               </div>
             </a>
-            <a href="https://docs.google.com/presentation/d/11l7VdAXhOc-jTKqMuDXCU43Rz068GhNM9zWigKU4qPE/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="doc-card">
+            <a href="/docs/W2_Midterm_Presentation.pdf" target="_blank" rel="noopener noreferrer" className="doc-card">
               <div className="doc-icon">&#x1F4C4;</div>
               <div>
                 <h3>Midterm Presentation</h3>
                 <p>Milestone updates and preliminary results</p>
               </div>
             </a>
-            <div className="doc-card">
+            <a href="/docs/Project_Glasshouse_Final_Report.pdf" target="_blank" rel="noopener noreferrer" className="doc-card">
               <div className="doc-icon">&#x1F4C4;</div>
               <div>
-                <h3>Final Report <span className="badge-soon">Coming Soon</span></h3>
+                <h3>Final Report</h3>
                 <p>Complete project documentation and findings</p>
               </div>
-            </div>
-            <div className="doc-card">
+            </a>
+            <a href="/docs/W4_Group8_Sustainability_Report.pdf" target="_blank" rel="noopener noreferrer" className="doc-card">
               <div className="doc-icon">&#x1F4C4;</div>
               <div>
-                <h3>Sustainability Report <span className="badge-soon">Coming Soon</span></h3>
+                <h3>Sustainability Report</h3>
                 <p>Environmental and sustainability analysis</p>
               </div>
-            </div>
+            </a>
+            <a href="/docs/Group8_Sustainability_Presentation.pptx.pdf" target="_blank" rel="noopener noreferrer" className="doc-card">
+              <div className="doc-icon">&#x1F4C4;</div>
+              <div>
+                <h3>Sustainability Presentation</h3>
+                <p>Slide deck summarizing the sustainability analysis</p>
+              </div>
+            </a>
             <a href="https://github.com/jackjones1320/Project-Glass-House" target="_blank" rel="noopener noreferrer" className="doc-card">
               <div className="doc-icon">&#x1F4D0;</div>
               <div>
